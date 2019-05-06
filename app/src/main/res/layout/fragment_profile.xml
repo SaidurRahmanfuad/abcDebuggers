@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UI.ProfileFragment">
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/profile_tabs"
+        android:layout_below="@+id/profile_extra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:background="@color/colorToolbar"
+        app:tabIndicatorColor="#E91E63"
+        app:tabSelectedTextColor="#066E96"
+        app:tabTextColor="#ffffff" />
+    <RelativeLayout
+        android:id="@+id/profile_extra"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorToolbar">
+         <ImageView
+             android:id="@+id/profile_extra_iv"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:src="@mipmap/ic_launcher_round"
+             android:layout_alignParentStart="true"
+             android:layout_marginLeft="180dp"/>
+
+
+
+        <TextView
+            android:id="@+id/profile_extra_tv"
+            android:layout_below="@+id/profile_extra_iv"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Saidur Rahman"
+            android:textColor="#ffff"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:layout_below="@+id/profile_extra"
+
+        android:id="@+id/profile_viewpager"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+</RelativeLayout>
